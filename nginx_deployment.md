@@ -66,10 +66,10 @@ May 10 13:25:45 ubuntu-xenial systemd[1]: Starting A high performance web server
 May 10 13:25:45 ubuntu-xenial systemd[1]: Started A high performance web server and a reverse proxy server.
 May 10 13:26:08 ubuntu-xenial systemd[1]: Started A high performance web server and a reverse proxy server.
 ```
-1.  Done: 
+10.  Done: 
 you can visit your nginx server on http://192.168.10.100/ 
 
-1.  Optional: Destroy the server when finished with it.
+11.  Optional: Destroy the server when finished with it.
 ```
 vagrant destroy
 ```
