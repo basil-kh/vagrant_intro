@@ -18,14 +18,14 @@ end
 ```
 vagrant up
 ```
-
-
-4. Enter the VM terminal (Login)
+Your VirtualBox manager should look something like this:
+![Alt text](imgs/Screenshot%202023-05-10%20151842.png)
+1. Enter the VM terminal (Login)
 ```
 vagrant ssh
 ```
 
-5. Downloads updated package files and stores them somewhere accessible
+1. Downloads updated package files and stores them somewhere accessible
 
 ```
 sudo apt-get update
