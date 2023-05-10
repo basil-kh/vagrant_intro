@@ -64,7 +64,7 @@ If it is running correctly will return something similar to:
 
 May 10 13:25:45 ubuntu-xenial systemd[1]: Starting A high performance web server and a reverse proxy server...
 May 10 13:25:45 ubuntu-xenial systemd[1]: Started A high performance web server and a reverse proxy server.
-May 10 13:26:08 ubuntu-xenial systemd[1]: Started A high performance web server and a reverse proxy server.```
+May 10 13:26:08 ubuntu-xenial systemd[1]: Started A high performance web server and a reverse proxy server.
 ```
 1.  Done: 
 you can visit your nginx server on http://192.168.10.100/ 
