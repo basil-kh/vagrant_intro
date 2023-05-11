@@ -1,14 +1,10 @@
 
-$script = <<-SCRIPT
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install nginx -y
-sudo systemctl start nginx
-sudo systemctl status nginx
-SCRIPT
-
 Vagrant.configure("2") do |config|
+  
+  # configures the VM settings
   config.vm.box = "ubuntu/xenial64"
   config.vm.network "private_network", ip:"192.168.10.100"
-  config.vm.provision "shell", inline: $script
+
+  # provision the VM to have Nginx installed
+  config.vm.provision "shell", path: "provision.sh"
 end
