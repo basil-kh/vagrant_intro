@@ -114,3 +114,138 @@ drwxrwxr-x 2 vagrant vagrant 4096 May 10 15:11 documents
 
 
 A permissions calculator -- [https://chmod-calculator.com/](https://chmod-calculator.com/)
+
+---
+```bash
+head -2 <file>
+```
+
+Will show the first 3 lines of example.txt
+>Note: head example.txt with no arugment would print first 10 lines.
+
+```bash
+tail -2 <file>
+```
+
+Will show the last 2 lines. 
+>Example use case: Lets say your looking through a log file, you can use this to access the latest logs.
+
+```bash
+sort <file>
+```
+
+Will sort the lines alphabetically, numbers will be sorted and take precedence .
+
+```bash
+nl <file>
+```
+
+Shows line numbers
+
+```bash
+wc <file>
+```
+
+Shows line / word / character count 
+
+![Alt text](imgs/wcexample.png)
+
+>6 = lines 18 = words 54 = characters
+
+```bash
+wc -l <file>
+```
+
+Will give lines only
+
+```bash
+ls | head -3
+```
+
+. | Is known as a pipe, used for chaining many commands, these will show only the first 3 file, can be used in MANY ways
+
+
+```bash
+ls | tail -1
+```
+
+Will show the last file
+
+```bash
+ls | head -3 | tail -1
+```
+
+Will show the second file
+
+```bash
+cat <file> | grep hello
+```
+
+will only show lines with hello in them
+
+```bash
+ctrl + z
+```
+
+Will Stop a process, lets say if you are stuck
+
+```bash
+top
+```
+
+show you processes currently running and resources they’re using IN REAL TIME, this is a forground process than can be left by pressing **q**
+
+```bash
+ps 
+```
+
+Tell you the processes being used
+
+```bash
+ps aux 
+```
+
+Gives a snapshot of what’s running and how much resources those processes are using
+
+```bash
+sleep 120 &
+```
+120 - refers to 120 seconds and **&** refers to running in background
+![Alt text](imgs/sleepcom.png)
+![Alt text](imgs/sleepcom2.png)
+
+
+```bash
+ps
+```
+Will show what processes are running and their PIDs
+
+![Alt text](imgs/ps.png)
+
+
+
+```bash
+kill <process>
+```
+Kills a process
+
+![Alt text](imgs/kill.png)
+— if kill doesnt get rid of it then use:
+
+```bash
+kill -9 <PID process ID>
+```
+There are many reasons you would want to kill a process including a crash or the setup is wrong but to rerun the programme you have to to stop it from running in the background first
+
+```bash
+sleep 5
+```
+Would take your control for 5 seconds as it is a forground process not a background process(&)
+
+
+```bash
+fg <optional:processname>
+```
+
+brings the background process to the foreground
+
