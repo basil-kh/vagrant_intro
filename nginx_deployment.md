@@ -73,3 +73,24 @@ you can visit your nginx server on http://192.168.10.100/
 ```
 vagrant destroy
 ```
+# Using provisioning to automate the above steps:
+1. Create a ![Alt text](imgs/provisionfile1.png) file in the same folder as your ![Alt text](imgs/vagrantfile.png)
+2. In your provision.sh file write the code to identify which console the command will be run in, in our case its bash:
+```sh
+   #!/bin/bash
+```
+3. Then we can enter the rest of our commands that we used above:
+```sh
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nginx -y
+sudo systemctl start nginx
+sudo systemctl status nginx
+```
+4. Then we go back to our ![Alt text](imgs/vagrantfile.png) and type :
+```ruby
+config.vm.provision "shell", path: "provision.sh"
+```
+below the previous lines like so: 
+![Alt text](imgs/codesnip.png)
+This will tell vagrant to input our code into bash once the VM has started and it will automatically execute the commands and install nginx for us.
