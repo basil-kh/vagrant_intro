@@ -7,4 +7,5 @@ Vagrant.configure("2") do |config|
 
   # provision the VM to have Nginx installed
   config.vm.provision "shell", path: "provision.sh"
+  #change to vagrant file to show working
 end
